@@ -110,6 +110,9 @@ const silentOn = new Transformer('ROOM_SILENT_ON', 'silentOn', msg => ({
     }))(msg),
 }));
 const silentOff = new Transformer('ROOM_SILENT_OFF', 'silentOff', spreadObj(['roomid', parseInt, 'roomId']));
+const popularity = new Transformer('POPULARITY', 'popularity', {
+    count: d => (d.data && d.data.count) || 0,
+});
 
 const transformers = [
     liveStart,
@@ -128,6 +131,7 @@ const transformers = [
     blockUser,
     silentOn,
     silentOff,
+    popularity,
 ];
 const registry = fromPairs(transformers.map(t => [t.cmd, t]));
 

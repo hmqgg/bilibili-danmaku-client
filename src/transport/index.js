@@ -101,6 +101,13 @@ class DataConnection extends CascadeConnection {
         this.on('section', (section) => {
             if (this.state === 'opened' && heartbeatAckCoder.hasConstructed(section)) {
                 log('Heartbeat ACK received.');
+                const popularity = section.data.readInt32BE(0);
+                this.onMessage({
+                    cmd: 'POPULARITY',
+                    data: {
+                        count: popularity,
+                    },
+                });
             }
         });
     }
