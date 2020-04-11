@@ -1,6 +1,6 @@
 {
   "name": "@tsuk1ko/bilibili-danmaku-client",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "A Node.js client for the Bilibili Live Danmaku Interface",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
     "@babel/preset-env": "^7.9.5",
     "@babel/register": "^7.9.0",
-    "core-js": "^3.6.5",
+    "core-js": "^2.6.11",
     "mocha": "^7.1.1"
   },
   "nyc": {

@@ -1,10 +1,10 @@
 "use strict";
 
-require("core-js/modules/es.object.to-string");
+require("core-js/modules/es6.regexp.to-string");
 
-require("core-js/modules/es.reflect.construct");
+require("core-js/modules/es6.object.to-string");
 
-require("core-js/modules/es.regexp.to-string");
+require("core-js/modules/es6.reflect.construct");
 
 function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
 
