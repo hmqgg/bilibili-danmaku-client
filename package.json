@@ -1,47 +1,39 @@
 {
-  "name": "bilibili-danmaku-client",
-  "version": "2.0.0",
+  "name": "@tsuk1ko/bilibili-danmaku-client",
+  "version": "2.1.0",
   "description": "A Node.js client for the Bilibili Live Danmaku Interface",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --recursive --require @babel/register",
-    "lint": "eslint **/*.js",
     "build": "babel src --out-dir dist"
   },
   "keywords": [
     "bilibili",
     "websocket"
   ],
-  "author": "std4453 <me@std4453.com> (https://std4453.com)",
-  "homepage": "https://std4453.github.io/bilibil-danmaku-client",
+  "author": "Jindai Kirin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/std4453/bilibili-danmaku-client"
+    "url": "https://github.com/Tsuk1ko/bilibili-danmaku-client"
   },
   "bugs": {
-    "url": "https://github.com/std4453/bilibili-danmaku-client/issues",
-    "email": "me@std4453.com"
+    "url": "https://github.com/Tsuk1ko/bilibili-danmaku-client/issues"
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0-beta.51",
-    "debug": "^3.1.0",
-    "lodash": "^4.17.10",
-    "x-platform-ws": "^0.2.0"
+    "@babel/polyfill": "^7.8.7",
+    "debug": "^3.2.6",
+    "lodash": "^4.17.15",
+    "x-platform-ws": "^0.2.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.51",
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "@babel/register": "^7.0.0-beta.51",
-    "core-js": "^2.5.7",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
-    "mocha": "^5.2.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "core-js": "^3.6.5",
+    "mocha": "^7.1.1"
   },
   "nyc": {
     "exclude": [
