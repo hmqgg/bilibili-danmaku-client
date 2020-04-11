@@ -1,9 +1,8 @@
 ﻿![Header image](assets/header.svg)
 
-[![npm](https://img.shields.io/npm/v/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-danmaku-client)
-[![npm](https://img.shields.io/npm/l/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-danmaku-client)
-[![david-dm](https://img.shields.io/david/std4453/bilibili-danmaku-client.svg?style=flat-square)](https://github.com/std4453/bilibili-danmaku-client)
-[![Maintainability](https://api.codeclimate.com/v1/badges/0f3581cbb3d2d9bd0243/maintainability)](https://codeclimate.com/github/std4453/bilibili-danmaku-client/maintainability)
+[![npm](https://img.shields.io/npm/v/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
+[![npm](https://img.shields.io/npm/l/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
+[![david-dm](https://img.shields.io/david/Tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://github.com/Tsuk1ko/bilibili-danmaku-client)
 
 # Bilibili Danmaku Client
 
