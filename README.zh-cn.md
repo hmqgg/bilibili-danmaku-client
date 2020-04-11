@@ -17,18 +17,20 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 
 ## 目录
 
-- [简介](#简洁)
-- [安装](#安装)
-- [使用方法](#使用方法)
-    - [建立链接](#建立连接)
+- [哔哩哔哩弹幕自动手记人偶](#哔哩哔哩弹幕自动手记人偶)
+  - [目录](#目录)
+  - [简介](#简介)
+  - [安装](#安装)
+  - [用法](#用法)
+    - [建立连接](#建立连接)
     - [监听事件](#监听事件)
     - [监听生命周期事件](#监听生命周期事件)
     - [关闭客户端](#关闭客户端)
-- [在浏览器中使用](#在浏览器中使用)
-- [本地开发](#本地开发)
-- [外部链接](#外部链接)
-- [作者](#作者)
-- [许可证](#许可证)
+  - [在浏览器中使用](#在浏览器中使用)
+  - [开发](#开发)
+  - [外部链接](#外部链接)
+  - [作者与贡献者](#作者与贡献者)
+  - [许可证](#许可证)
 
 ## 简介
 
@@ -47,7 +49,7 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 那，那你听好了哦！先[安装`node`和`npm`](https://www.runoob.com/nodejs/nodejs-install-setup.html)，然后：
 
 ```console
-    $ npm install --save bilibili-danmaku-client
+npm install --save bilibili-danmaku-client
 ```
 
 （脸红）别问那么多为什么了！跟着做就是了！行不行本小姐把你电成烤猪肉！如果蹦出来什么`peer dependencies not installed`之类的，不要管他就是了！知道了吗！
@@ -63,32 +65,32 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 ### 建立连接
 
 ```javascript
-    const DanmakuClient = require('bilibili-danmaku-client');
-    // https://live.bilibili.com/5440
-    const client = new DanmakuClient(5440);
-    client.start();
+const DanmakuClient = require('bilibili-danmaku-client');
+// https://live.bilibili.com/5440
+const client = new DanmakuClient(5440);
+client.start();
 ```
 
 ### 监听事件
 
 ```javascript
-    const client = ...;
-    
-    const onDanmaku = ({ content, sender }) =>
-        console.log(`${sender.name}: ${content}`);
-    const onGift = ({ gift, num, sender }) =>
-        console.log(`${sender.name} => ${gift.name} * ${num}`);
+const client = ...;
 
-    client.on('event', ({ name, content }) => {
-        switch (name) {
-        case 'danmaku':
-            onDanmaku(content);
-            break;
-        case 'gift':
-            onGift(content);
-            break;
-        }
-    })
+const onDanmaku = ({ content, sender }) =>
+    console.log(`${sender.name}: ${content}`);
+const onGift = ({ gift, num, sender }) =>
+    console.log(`${sender.name} => ${gift.name} * ${num}`);
+
+client.on('event', ({ name, content }) => {
+    switch (name) {
+    case 'danmaku':
+        onDanmaku(content);
+        break;
+    case 'gift':
+        onGift(content);
+        break;
+    }
+})
 ```
 
 事件部分的具体细节请看[这里](https://github.com/std4453/bilibili-danmaku-client/wiki/Events)。（英语）
@@ -96,9 +98,9 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 ### 监听生命周期事件
 
 ```javascript
-    const client = ...;
-    client.on('open', () => console.log('Client opened.'));
-    client.on('close', () => console.log('Client closed.'));
+const client = ...;
+client.on('open', () => console.log('Client opened.'));
+client.on('close', () => console.log('Client closed.'));
 ```
 
 （这就不用翻译了吧)
@@ -106,9 +108,9 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 ### 关闭客户端
 
 ```javascript
-    const client = ...;
-    client.terminate();
-    client.on('close' () => console.log('Client closed.'));
+const client = ...;
+client.terminate();
+client.on('close' () => console.log('Client closed.'));
 ```
 
 注意`terminate()`只向客户端提出关闭请求，客户端正式关闭后会产生`'close'`事件。如果有必要的话，请根据`'close'`事件来进行处理。
@@ -143,19 +145,19 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 1. 将git项目克隆到本地
 
 ```console
-    $ git clone -b master https://github.com/std4453/bilibili-danmaku-client.git
+git clone -b master https://github.com/std4453/bilibili-danmaku-client.git
 ```
 
 2. 安装依赖项+构建
 
 ```console
-    $ npm install && npm run build
+npm install && npm run build
 ```
 
 3. 运行测试
 
 ```console
-    $ npm test
+npm test
 ```
 
 それで十分わよ！お楽しみに！
@@ -169,9 +171,11 @@ _本文档在不同语言下有多种版本：[English](README.md)，[简体中�
 - [知乎文章](https://zhuanlan.zhihu.com/p/37874066) （欢迎点赞、关注）
 - [API文档](https://github.com/std4453/bilibili-danmaku-client/wiki/DanmakuClient) （英语）
 
-## 作者
+## 作者与贡献者
 
 - __std4453__ - [me@std4453.com](mailto:me@std4453.com) - [知乎](https://www.zhihu.com/people/std4453)
+- [**malei0311**](https://github.com/malei0311)
+- [**Tsuk1ko**](https://github.com/Tsuk1ko)
 
 ## 许可证
 

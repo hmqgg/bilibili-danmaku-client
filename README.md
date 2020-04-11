@@ -13,18 +13,20 @@ _Read this in another language: [English](README.md), [简体中文](README.zh-c
 
 ## Table of content
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Bilibili Danmaku Client](#bilibili-danmaku-client)
+  - [Table of content](#table-of-content)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Usage](#usage)
     - [Open a connection](#open-a-connection)
     - [Listen to Events](#listen-to-events)
     - [Listen to client lifecycle](#listen-to-client-lifecycle)
     - [Terminate client](#terminate-client)
-- [Usage in browser](#usage-in-browser)
-- [Developement](#development)
-- [Links](#links)
-- [Author](#author)
-- [License](#license)
+  - [Usage in browser](#usage-in-browser)
+  - [Development](#development)
+  - [Links](#links)
+  - [Author and Contributors](#author-and-contributors)
+  - [License](#license)
 
 ## Introduction
 
@@ -41,7 +43,7 @@ It can't be easier to install a `npm` package.
 First make sure that you have `npm` and `node` correctly installed and in `PATH`, and then:
 
 ```console
-    $ npm install --save bilibili-danmaku-client
+npm install --save bilibili-danmaku-client
 ```
 
 If you see something like `peer dependencies not installed`, don't panic, see [this sector](#usage-in-browser) below.
@@ -55,32 +57,32 @@ If you see something like `peer dependencies not installed`, don't panic, see [t
 ### Open a connection
 
 ```javascript
-    const DanmakuClient = require('bilibili-danmaku-client');
-    // https://live.bilibili.com/5440
-    const client = new DanmakuClient(5440);
-    client.start();
+const DanmakuClient = require('bilibili-danmaku-client');
+// https://live.bilibili.com/5440
+const client = new DanmakuClient(5440);
+client.start();
 ```
 
 ### Listen to Events
 
 ```javascript
-    const client = ...;
-    
-    const onDanmaku = ({ content, sender }) =>
-        console.log(`${sender.name}: ${content}`);
-    const onGift = ({ gift, num, sender }) =>
-        console.log(`${sender.name} => ${gift.name} * ${num}`);
+const client = ...;
 
-    client.on('event', ({ name, content }) => {
-        switch (name) {
-        case 'danmaku':
-            onDanmaku(content);
-            break;
-        case 'gift':
-            onGift(content);
-            break;
-        }
-    })
+const onDanmaku = ({ content, sender }) =>
+    console.log(`${sender.name}: ${content}`);
+const onGift = ({ gift, num, sender }) =>
+    console.log(`${sender.name} => ${gift.name} * ${num}`);
+
+client.on('event', ({ name, content }) => {
+    switch (name) {
+    case 'danmaku':
+        onDanmaku(content);
+        break;
+    case 'gift':
+        onGift(content);
+        break;
+    }
+})
 ```
 
 For more information about __Events__, see [Wiki](https://github.com/std4453/bilibili-danmaku-client/wiki/Events).
@@ -88,17 +90,17 @@ For more information about __Events__, see [Wiki](https://github.com/std4453/bil
 ### Listen to client lifecycle
 
 ```javascript
-    const client = ...;
-    client.on('open', () => console.log('Client opened.'));
-    client.on('close', () => console.log('Client closed.'));
+const client = ...;
+client.on('open', () => console.log('Client opened.'));
+client.on('close', () => console.log('Client closed.'));
 ```
 
 ### Terminate client
 
 ```javascript
-    const client = ...;
-    client.terminate();
-    client.on('close' () => console.log('Client closed.'));
+const client = ...;
+client.terminate();
+client.on('close' () => console.log('Client closed.'));
 ```
 
 Note that you must listen to the `'close'` event to be notified when the client is actually closed. `terminate()` only requests close, not forces it.
@@ -122,19 +124,19 @@ To build and test the package yourself:
 1. Clone the github repository
 
 ```console
-    $ git clone -b master https://github.com/std4453/bilibili-danmaku-client.git
+git clone -b master https://github.com/Tsuk1ko/bilibili-danmaku-client.git
 ```
 
 2. Build
 
 ```console
-    $ npm install && npm run build
+npm install && npm run build
 ```
 
 3. Test
 
 ```console
-    $ npm test
+npm test
 ```
 
 ## Links
@@ -144,9 +146,11 @@ To build and test the package yourself:
 - [Zhihu article](https://zhuanlan.zhihu.com/p/37874066) (Chinese)
 - [API reference](https://github.com/std4453/bilibili-danmaku-client/wiki/DanmakuClient)
 
-## Author
+## Author and Contributors
 
 - __std4453__ - [me@std4453.com](mailto:me@std4453.com) - [blog](http://blog.std4453.com)
+- [**malei0311**](https://github.com/malei0311)
+- [**Tsuk1ko**](https://github.com/Tsuk1ko)
 
 ## License
 
