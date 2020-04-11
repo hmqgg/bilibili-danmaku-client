@@ -11,7 +11,7 @@ const { CascadeConnection } = require('../util/connection');
 const DataConnection = require('../transport');
 const { registry } = require('./definitions');
 
-const url = 'wss://broadcastlv.chat.bilibili.com:2245/sub';
+const url = 'wss://broadcastlv.chat.bilibili.com/sub';
 /**
  * Return the handshake JSON with the room id.
  * @param {Number} room The room number.
