@@ -1,10 +1,12 @@
-﻿![Header image](assets/header.svg)
+﻿![Header image](https://cdn.jsdelivr.net/gh/Tsuk1ko/bilibili-danmaku-client/assets/header.svg)
 
 [![npm](https://img.shields.io/npm/v/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
 [![npm](https://img.shields.io/npm/l/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
 [![david-dm](https://img.shields.io/david/Tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://github.com/Tsuk1ko/bilibili-danmaku-client)
 
 # Bilibili Danmaku Client
+
+> This is a fork of [std4453/bilibili-danmaku-client](https://github.com/std4453/bilibili-danmaku-client) for supporting necessary part of danmaku protocol v2.
 
 A standalone client for connecting to the Bilibili Live Danmaku Interface, in Node.js and the browser.
 
@@ -141,7 +143,7 @@ npm test
 ## Links
 
 - [Live demo](https://std4453.github.io/bilibili-danmaku-client)
-- [npm package](https://www.npmjs.com/package/bilibili-danmaku-client)
+- [npm package](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
 - [Zhihu article](https://zhuanlan.zhihu.com/p/37874066) (Chinese)
 - [API reference](https://github.com/std4453/bilibili-danmaku-client/wiki/DanmakuClient)
 

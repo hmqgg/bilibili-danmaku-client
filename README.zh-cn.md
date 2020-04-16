@@ -1,10 +1,12 @@
-﻿![Header image](assets/header.svg)
+﻿![Header image](https://cdn.jsdelivr.net/gh/Tsuk1ko/bilibili-danmaku-client/assets/header.svg)
 
 [![npm](https://img.shields.io/npm/v/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-danmaku-client)
 [![npm](https://img.shields.io/npm/l/@tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-danmaku-client)
 [![david-dm](https://img.shields.io/david/Tsuk1ko/bilibili-danmaku-client.svg?style=flat-square)](https://github.com/Tsuk1ko/bilibili-danmaku-client)
 
 # 哔哩哔哩弹幕自动手记人偶
+
+> 这是为了支持某些被强制使用的直播弹幕 v2 协议而创建的 [std4453/bilibili-danmaku-client](https://github.com/std4453/bilibili-danmaku-client) 的一个分支
 
 > 彼女はまだ知らない、「愛してる」の意味を。
 
@@ -166,9 +168,9 @@ npm test
 ## 外部链接
 
 - [在线演示](https://std4453.github.io/bilibili-danmaku-client)
-- [npm包](https://www.npmjs.com/package/bilibili-danmaku-client)
+- [npm 包](https://www.npmjs.com/package/@tsuk1ko/bilibili-danmaku-client)
 - [知乎文章](https://zhuanlan.zhihu.com/p/37874066) （欢迎点赞、关注）
-- [API文档](https://github.com/std4453/bilibili-danmaku-client/wiki/DanmakuClient) （英语）
+- [API 文档](https://github.com/std4453/bilibili-danmaku-client/wiki/DanmakuClient) （英语）
 
 ## 作者与贡献者
 
