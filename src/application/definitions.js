@@ -49,7 +49,7 @@ const gift = new Transformer('SEND_GIFT', 'gift', on(m => m.data, {
     gift: spreadObj(['giftName', 0, 'name'], ['giftId', 0, 'id'], ['giftType', 0, 'type'], 'price'),
     sender: userSrc,
     left: onWhen(m => m, m => m.gold > 0 && m.silver > 0, spreadObj('gold', 'silver')),
-    topList: d => d.top_list.map(parseTopUser),
+    topList: d => d.top_list?.map(parseTopUser),
 }));
 const tempoStorm = new Transformer('SPECIAL_GIFT', 'tempoStorm', on(m => m.data[39], {
     ...spreadObj('action', 'id'),
